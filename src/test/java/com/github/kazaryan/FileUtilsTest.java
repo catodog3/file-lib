@@ -52,7 +52,6 @@ class FileUtilsTest {
         assertThrows(IllegalArgumentException.class, () -> FileUtils.writeTextFile(path, null));
     }
 
-    // TODO проверить правильность тестов на копирование
     @Test
     void copySuccessNoOverwriteWhenTargetMissing() {
         Path src = tempDir.resolve("src.txt");
@@ -94,7 +93,6 @@ class FileUtilsTest {
         assertThrows(IllegalArgumentException.class, () -> FileUtils.copyFile(dst, null, true));
     }
 
-    // TODO проверить правильность тестов на удаление
     @Test
     void deleteSuccess() {
         Path f = tempDir.resolve("a.txt");
@@ -116,7 +114,6 @@ class FileUtilsTest {
         assertThrows(IllegalArgumentException.class, () -> FileUtils.deleteFile(null));
     }
 
-    // TODO проверить правильность тестов на поиск
     @Test
     void findByExtensionSuccess() throws IOException {
         Path dir = tempDir.resolve("dir");
